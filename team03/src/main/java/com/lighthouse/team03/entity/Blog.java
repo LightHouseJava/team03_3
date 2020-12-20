@@ -1,19 +1,21 @@
 package com.lighthouse.team03.entity;
 
 public class Blog {
-	private String username;
-	private String title;
-	private String subtitle;
-	private String body;
-	private byte[] image;
+	private String userName=null;
+	private String title=null;
+	private String subtitle=null;
+	private String body=null;
+	private byte[] image = null;
 	
-
-	public String getUsername() {
-		return username;
+	
+	
+	public String getUserName() {
+		return userName;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
+	
 	public String getTitle() {
 		return title;
 	}
@@ -39,9 +41,4 @@ public class Blog {
 		this.image = image;
 	}
 	
-	
-	@Override
-	public String toString() {
-		return "Blog [username=" + username + ", title=" + title + ", subtitle=" + subtitle + ",body=" + body + ",image=" + image + "]";
-	}
 }

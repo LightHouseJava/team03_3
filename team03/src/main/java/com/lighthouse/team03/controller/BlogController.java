@@ -24,7 +24,7 @@ public class BlogController {
 	@PostMapping("/newBlogSubmission")
 	public String newBlogSubmission(@RequestHeader("username") String usename, @ModelAttribute("blog") Blog blog,
 			HttpServletRequest request, RedirectAttributes redirectAttributes) {
-		blog.setUsername(usename);
+		blog.setUserName(usename);
 		blogMapper.addBlog(blog);
 		
 		request.setAttribute(View.RESPONSE_STATUS_ATTRIBUTE,HttpStatus.TEMPORARY_REDIRECT);

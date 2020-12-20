@@ -79,30 +79,26 @@ input{
 
 <body>
 
-	<h1>Login</h1>
-	 <img class="bgc" src="/desk.jpg" width="100%" alt="">
-	 <form action="#" th:action="@{/}" th:object="${loginUser}" method="post">
-	<div  align="center">
-             <div class="logo"></div>
-             <div class="form-item">
-             <label for="userName"><b>User name</b></label>
-                 <input  type="text" placeholder="Enter User name" name="userName" th:field="*{userName}" required>
-             </div>
-             
-             <div class="form-item">
-             <label for="password"><b>Password</b></label>
-                 <input type="password" placeholder="Enter Password" name="password" th:field="*{password}" required>
-             </div>
-    
-             <div class="form-item"><button id="submit">Sign in</button></div>
-		
-		<br>
-		<p align="center">
-			Have no account yet? 
-			<a href="/register">Register</a>.</p>
+	<form action="#" th:action="@{/loginSubmission}" th:object="${loginUser}" method="post">
+		<div class="container">
+			<h1>Login</h1>
+			<hr>
 
-	</div>
-    </form>
+			<label for="userName"><b>User name</b></label> 
+			<input type="text" placeholder="Enter User name" name="userName" th:field="*{userName}"
+				required> <label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" th:field="*{password}" required>
+			<hr>
+
+			<button type="submit" class="registerbtn">Sign in</button>
+		</div>
+
+		<div class="container signin">
+			<p>
+				Have no account yet? <a href="/register">Register</a>.
+			</p>
+		</div>
+	</form>
 
 
 </body>
